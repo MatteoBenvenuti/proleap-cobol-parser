@@ -5,7 +5,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<name>proleap-cobol-parser</name>
 	<description>An ANTLR4-based parser and grammar for COBOL</description>
-	<groupId>io.github.uwol</groupId>
+	<groupId>io.github.MatteoBenvenuti</groupId>
 	<artifactId>proleap-cobol-parser</artifactId>
 	<version>4.0.0</version>
 	<packaging>jar</packaging>
@@ -120,4 +120,12 @@
 			</plugin>
 		</plugins>
 	</build>
+
+	<distributionManagement>
+		<repository>
+			<id>github</id>
+			<name>GitHub MatteoBenvenuti Apache Maven Packages</name>
+			<url>https://maven.pkg.github.com/MatteoBenvenuti/proleap-cobol-parser</url>
+		</repository>
+	</distributionManagement>
 </project>
