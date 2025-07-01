@@ -33,7 +33,19 @@ public class CopyCblWrdTest {
 
 		final File expectedFile = new File(DIR + "/CopyCblWord.cbl.preprocessed");
 		final String expected = Files.readString(expectedFile.toPath(), StandardCharsets.UTF_8);
+
+		System.out.println("Expected:");
+		System.out.println(visualizeLineEndings(expected));
+
+		System.out.println("Actual:");
+		System.out.println(visualizeLineEndings(preProcessedInput));
 		assertEquals(expected, preProcessedInput);
+	}
+
+	private String visualizeLineEndings(String input) {
+		return input
+				.replace("\r", "\\r")
+				.replace("\n", "\\n\n"); // stampa newline visivamente dopo ogni riga
 	}
 
 	@Test
